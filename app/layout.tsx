@@ -1,7 +1,6 @@
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar";
-import AuthProviders from "@/components/AuthProviders";
 
 export const metadata = {
   title: "Παιδαγωγικό Κέντρο",
