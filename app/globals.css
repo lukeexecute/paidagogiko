@@ -2,26 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.flexCenter {
+  @apply flex justify-center items-center;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.flexBetween {
+  @apply flex justify-between items-center;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.flexColBetween {
+  @apply flex flex-col justify-between;
+}
+
+.flexStart {
+  @apply flex items-center justify-start;
+}
+
+.navbar {
+  @apply sticky bg-navbar-color h-12 space-x-4 px-4 text-white;
+}
+
+.sidebar {
+  @apply flex-none sticky h-[calc(100vh-48px)] px-2 py-4 bg-sidebar-color border-r border-gray-200 duration-200;
+}
+
+.mainContent {
+  @apply flex-auto h-[calc(100vh-48px)] overflow-y-auto px-2 py-2;
 }
